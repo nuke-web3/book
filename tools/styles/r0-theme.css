@@ -1,0 +1,24 @@
+/**
+ * RISC Zero slide theme
+ * Derived from the night theme in reveal.js
+ * More info https://github.com/webpro/reveal-md#theme & https://revealjs.com/themes/
+**/
+
+/*********************************************
+ * OVERRIDES FOR `base-theme.css`
+ * Use with line in `slides.md`:
+ * <link rel="stylesheet" href="../../../tools/styles/r0-theme.css">
+ *********************************************/
+
+:root {
+  --r-heading-font: 'Unbounded';
+  --r-heading-color: #fbff96;
+  /* custom var */
+  --r-link-color: #cdd06f;
+  --r-link-color-decoration: #fbff96;
+  --r-color-controls: #fbff96;
+  --r-link-color-dark: #cdd06f;
+  --r-link-color-hover: #fbff96;
+  --r-selection-background-color: #fbff96;
+  --r-selection-color: #ffffff;
+}

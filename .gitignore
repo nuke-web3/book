@@ -1,0 +1,41 @@
+# Build artifacts
+/html*
+
+# Rust artifacts
+**/target
+
+# Jupyter artifacts
+**/.ipynb_checkpoints/**
+
+# Some common ones
+tmp
+tmp/**
+*.log
+log/**
+.vscode
+.idea/
+*.iml
+*.iws
+*.eml
+out/
+.DS_Store
+.svn
+node_modules/
+.sass-cache
+_static/
+
+# Yarn, not using zero-installs
+# ref: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+# Yarn Integrity file
+.yarn-integrity
+
+## Draw,io
+*.bkp
+*.dtmp

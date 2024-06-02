@@ -1,0 +1,19 @@
+{
+  "name": "nuke-book",
+  "version": "1.0.0",
+  "description": "The materials used in Nuke 🌄 's talks and workshops",
+  "scripts": {
+    "s": "bun serve-slides",
+    "dev": "bun serve-slides",
+    "start": "bun serve-slides",
+    "b": "bun build-slides-local",
+    "help-rmd": "reveal-md --help",
+    "serve-slides": "reveal-md ./ --watch --absolute-url http://localhost:1948",
+    "serve-book": "printf '****************************** 👇 ctrl+click to open 👇 ******\\nNon-watching server started @    http://localhost:1949\\n               (Close with SIGINT [Ctrl-C])' & bun tools/scripts/devserver.ts ",
+    "build-slides-local": "rm -rf html-slides && reveal-md ./ --static html-slides",
+    "build-slides-gh-pages": "rm -rf html-slides && reveal-md ./ --static html-slides --absolute-url https://nuke-web3.github.io/book/"
+  },
+  "dependencies": {
+    "reveal-md": "^5.5.2"
+  }
+}
