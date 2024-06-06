@@ -12,8 +12,8 @@ separator: "\r?\n---\r?\n"
 verticalSeparator: "\r?\n---v\r?\n"
 # Below can be any of these: https://revealjs.com/config/
 revealOptions:
-  transition: "slide" # animation between slides = none/fade/slide/convex/concave/zoom
-	backgroundTransition: "fade" # background swap between slides = none/fade/slide/convex/concave/zoom
+  transition: "convex" # animation between slides = none/fade/slide/convex/concave/zoom
+	backgroundTransition: "none" # background swap between slides = none/fade/slide/convex/concave/zoom
 	slideNumber: true
 	controls: true
 	progress: true
@@ -21,13 +21,23 @@ revealOptions:
 
 <link rel="stylesheet" href="../../../tools/styles/r0-theme.css">
 
+<style>
+.reveal .slide-background-content {
+  background-image: url("./img/r0_planet.svg");
+  background-size: contain;
+  opacity: 0.3;
+}
+</style>
+
+<section data-background-opacity=0.3>
+
 # Verifiable Games
 
-#### _Using RISC Zero_
+<h4 id="using-risc-zero" style="margin-top: -50px;"> <em>Using RISC Zero</em> </h4>
 
-<img rounded style="width: 50%" src="./img/fusion-dragon-ball.gif" />
+<img rounded style="width: 50%; height: 230px; object-fit: cover;" src="./img/fusion-dragon-ball.gif" />
 
-**_On-chain_ $~~~$ $ 👉 ZK 👈 $ $~~~$ _Off-chain_**
+**_On-chain_ $~~~$ 👉 $ZK$ 👈 $~~~$  _Off-chain_**
 
 <a style="font-size: 0.8em" target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zypher-buildathon/materials.html">Workshop Materials ↗️</a>
 
