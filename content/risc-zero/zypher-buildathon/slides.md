@@ -1,5 +1,5 @@
 ---
-title: Verifiale Games Using RISC Zero
+title: Verifiable Games Using RISC Zero
 tags: RISC Zero, Talk, Presentation, Workshop, zkVM, zkGames, Zypher, Hackathon, Buildathon, Zero Knowledge Proof, Applied Cryptography, Rust, Zypher
 duration: 60 minuets
 description: RISC Zero Workshop for the Zypher Provable Games Buildathon - June 2024 
@@ -37,9 +37,9 @@ revealOptions:
 
 <img rounded style="width: 50%; height: 230px; object-fit: cover;" src="./img/fusion-dragon-ball.gif" />
 
-**_On-chain_ $~~~$ 👉 $ZK$ 👈 $~~~$  _Off-chain_**
+**_On-chain_ $~~~$ 👉 $ZK$ 👈 $~~~$ _Off-chain_**
 
-<a style="font-size: 0.8em" target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zypher-buildathon/materials.html">Workshop Materials ↗️</a>
+<a target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zypher-buildathon/materials.html">Event Materials ↗️</a>
 
 ---
 
@@ -60,20 +60,31 @@ Notes:
 
 ## What problems can ZK address for games?
 
-On-chain (coprocessor):
+<nuke-cols>
+<nuke-col center>
+
+### On-chain & Web3
 
 - calldata limits restrict complexity
-- gas costs are prohibitive
-- public blockchains don’t support incomplete information games
-- Zypher’s bullet points for challenges of on-chain gaming
+- prohibitive gas costs
+- most blockchains lack privacy
 
-Off-chain (TODO):
+</nuke-col>
+<nuke-col center>
+
+### Off-chain & Web2
 
 - Cheating through manipulation of official game logic
-- Private game aspects without any 3rd party / admin to adjudicate.
+- Private game aspects without any 3rd party / admin to adjudicate
+
+</nuke-col>
+</nuke-cols>
+
+> See <a target="_blank" href="https://zyphergames.notion.site/gZKm-supporting-content-528587063a314eabb9eb1ecc1d87b8b0">Zypher's supporting content</a> for more.
 
 Notes:
 
+- **ZK coprocessor** - run verifiable program logic in zkVM by 3rd party or yourself to untrusting parties
 - Added **security** and **fairness** and **privacy** that zero-knowledge proofs can provide, as they involve complex decision-making and competitive interactions.
 - Commonly turn based, but can simply be tick based (STF analogy -> blocks)
 - Privacy is optional, fully transparent games with ZKPs _can_ provided added guarantees around many things other than that (if carefully designed)
@@ -85,7 +96,6 @@ Notes:
   - Enabling incomplete information games (e.g. “fog of war” mechanics)
 - Can prove final score without revealing _anything_ about the game that resulted in it! Proof of Exploit CTF.
 
-- todo Mention alternatives? Why we are a good or the best choice? (privacy possible, not solidity or DSL specific)
 - Off-chain: CFT game where you prove you got a flag without revealing it (because that needs to remain secret) no 3rd party to check, use a proof!
 
 ---
@@ -100,22 +110,34 @@ Developers are encouraged to implement game designs that can verify player actio
 
 ---
 
-## Definitions & Lingo
+## RISC Zero 101
 
-- TODO diagram of host that encapsulates guest w/ input & output
-- see https://www.youtube.com/watch?v=DzOWh3Ht0_Q & get diagrams
+<img rounded style="width: 60%;" src="./img/zkVM-diagram-black.png" />
+
+> Read <a target="_blank" href="https://dev.risczero.com/api/getting-started">Getting Started</a> and/or watch the <a target="_blank" href="https://www.youtube.com/playlist?list=PLcPzhUaCxlCj7wKkzekYYq7QDvtGTOPm7">playlist</a>.
 
 Notes:
 
 - deeper understanding as exercise for views of this presentation.
-  See the official docs & youtube for great deep
 - very happy to answer questions on our discord!
+
+---
+
+## RISC Zero On-chain
+
+<img rounded style="width: 60%;" src="./img/risc0-ethereum-bonsai.png" />
+
+> Read about <a target="_blank" href="https://dev.risczero.com/api/blockchain-integration/bonsai-on-eth">Blockchain Integration</a> and watch the <a target="_blank" href="https://www.youtube.com/playlist?list=PLcPzhUaCxlCgsTtFen4oxFIDkUMSVSFFo">Foundry Template playlist</a>.
+
+Notes:
+
+- TODO diagram how the proof works in game context (seq. diagrams with actors IDed (player, execution, prover))
 
 ---
 
 # ✨ Inspiration
 
-> :warning: _Do not copy&paste submissions_ :pray:
+##### ⚠️ -- Do not copy 🍝 -- 🙏
 
 Notes:
 
@@ -126,25 +148,27 @@ Building on them to something significantly enhancements _**may**_ be considered
 
 ## ZK Checkmate Demo
 
-<!-- FIXME link that works in book and slids and gh-pages -->
+<!-- FIXME link that works in book and slides and gh-pages -->
 
-Join in following the [Hands-on instructions ↗️](./checkmate-chess-example.md)
+Join in following the [Hands-on instructions ↗️](./workshop.md)
 
 Notes:
 
-- Chess demo for verifying a winning move (checkmate) without revealing what the move is.
-  Contrived example a bit, but highlights:
-  - use crates without modification - no need to rewrite in circuits or zkDSL!
-  - Use standard patterns like `println!` & `fmt!` normally for basic experiments.
-  - 10s on lines of code overall -> useful proof, easily extensible!
-- Original [deep dive video](https://www.youtube.com/watch?v=vxqxRiTXGBI&list=PLcPzhUaCxlCgig7ofeARMPwQ8vbuD6hC5&index=10) ([slides](https://drive.google.com/file/d/1Bum4x50qatqBUlQyNVkt90nnA2SEOHNO/view))
+- See the recording there to follow along for an overview.
+- I encourage you to experiment yourself!
 
 ---
 
-## <a target="_blank" href="https://github.com/risc0/risc0/tree/release-0.21/examples/bevy">Bevy (R0 v0.21)</a>
+## <a target="_blank" href="https://github.com/risc0/risc0/tree/v1.0.1/examples/bevy">Bevy (R0 v1.0.1)</a>
 
-- Serious Rust game engine for ZK games
-- BEST place to start to see if you can compile & run this without modification on your machine.
+- **Serious** Rust <a target="_blank" href="https://bevyengine.org/">game engine</a>
+- Great base to start hackin' 🤠
+- Start with shared `core` logic
+
+Notes:
+
+- Core logic can be used in the host & the guest for Bevy games
+- Design guest to be _minimal_ as proofs are costly!
 
 ---
 
@@ -152,7 +176,7 @@ Notes:
 
 <iframe loading=lazy width="560" height="315" src="https://www.youtube-nocookie.com/embed/zkMqd_AhCFU?si=XH-R6XPzIqf0pHN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-> https://github.com/0xAndoroid/zkSnake
+#### <a target="_blank" href="https://github.com/0xAndoroid/zkSnake">zkSnake Source ↗️</a>
 
 Notes:
 
@@ -163,12 +187,13 @@ Notes:
 
 ## 3D ZK Games?!
 
-## ▶️ <a target="_blank" href="https://bevyengine.org/examples/Games/alien-cake-addict">Bevy Wasm webGPL/webGPU example</a>
+<img rounded style="width: 50%; height: 230px; object-fit: cover;" src="./img/bevy-alien-cake-addict.gif" />
 
-🤯 <a target="_blank" href="https://zyphergames.notion.site/Invitation-gZKm-Provable-Games-Buildathon-1e52aef746874bf08ff1a12c4eed799b?p=77dac845c4984302b9d43a34cc7c2892&pm=c">Zypher Real-time Multiplayer Games Track</a> featured demo!
+#### <a target="_blank" href="https://bevyengine.org/examples/Games/alien-cake-addict">🎮 Play the Demo 🎮</a>
 
+- <a target="_blank" href="https://zyphergames.notion.site/Invitation-gZKm-Provable-Games-Buildathon-1e52aef746874bf08ff1a12c4eed799b?p=77dac845c4984302b9d43a34cc7c2892&pm=c">Real-time Multiplayer Games Track</a> featured demo!
 - <a target="_blank" href="https://github.com/zypher-game/Alien-Cake-Addict">Rendered web game + wallet connect</a>
-- <a target="_blank" href="https://github.com/bevyengine/bevy-website/blob/main/generate-wasm-examples/generate_wasm_examples.sh">Original Bevy docs source</a> to generate the playable browser example
+- <a target="_blank" href="https://github.com/bevyengine/bevy-website/blob/main/generate-wasm-examples/generate_wasm_examples.sh">Demo tooling</a> to generate browser example
 
 ---
 
@@ -176,7 +201,7 @@ Notes:
 
 - developer productivity (@ hackathons & beyond)
   - Top 1000 [crates.io](https://crates.io/) tested ~nightly: [reports.risczero.com](https://reports.risczero.com/)
-- todo: key features that are HARD in zkDLS
+- todo: key features that are HARD in zkDSL
 - proof continuation
 - execution separate from proof (realtime exec & prove in parallel / after / remote)
 - foundry template & steel & mainnet verifiers
@@ -193,8 +218,22 @@ Notes:
 
 ---
 
+## 🎨 ZK Game Design Patterns
+
+- Prove transcript of game for verifiable high scores
+- Prove state update based on complex game logic
+- Prove validity of player moves while concealing
+- play & prove latter (snake game)
+- proof for each hidden move, perhaps in a tx on chain
+- can run only core game logic in zkVM - GUI and other non-security/privacy/fairness aspects can live outside the proven core logic (diagram)
+- randomness
+  - cannot do within guest - only fake & deterministic random for replay of moves perhaps (who gets to know seed? Choose? VRF maybe?)
+
+---
+
 ## 📝 Key Takeaways
 
+- as a game dev: what does zk do and not do for me?
 - IMPORTANT: match version of `cargo risczero` & examples / templates / examples
 - keep guest minimal - extra cycles are VERY expensive (but this is a hackathon, don't over optimize)
 - USE DEV MODE!
@@ -206,46 +245,6 @@ Notes:
 
 ---
 
-## TODO
-
-- You emphasized that the proofs are “verrrry” expensive to build — I think we can dial that back. As a it’s something like 100k-1M times more expensive than native compute.
-- Not sure what we can offer re malware/viruses — that felt a bit confusing to me
-- Jumping around windows was disorienting — would suggest figuring out the specific ordering of which windows you want to open and try to use more words to flag what’s about to happen. perhaps even grabbing the relevant screenshots and importing things into the slides rather than doing a live-tour
-- Make text bigger pretty much everywhere, but especially in terminal windows
-- FEN is a format for notation chess games and chess positions https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation
-- Nice job highlighting the idea that you don't have to do everything inside the zkvm
-- Would be nice to synthesize the design patterns. i.e., things we can do are:
-  - Prove transcript of game for verifiable high scores
-  - Prove state update based on complex game logic.
-  - Prove validity of player moves while concealing
-- Question about pulling something out into core library.
-- Typo on last slide re: zkDSL (it says zkDLS)
-
-youtube description workshop instructions?
-
-see discord ref page for moving to book
-
-missing:
-
-- synthesis of design patterns used in games
-  - play & prove latter (snake game)
-  - proof for each hidden move, perhaps in a tx on chain
-  - can run only core game logic in zkVM - GUI and other non-security/privacy/fairness aspects can live outside the proven core logic (diagram)
-- recap
-  - as a game dev: what does zk do and not do for me?
-- randomness
-  - cannot do within guest - only fake & deterministic random for replay of moves perhaps (who gets to know seed? Choose? VRF maybe?)
-- video or screen shots instead of live code
-- more diagrams especially wrt games
-  - how the proof works in game context (seq. diagrams with actors IDed (player, execution, prover))
-- what do we not know about web3 games... more on chain that we know of as a team?
-- bigger text (for term especially)
-- More about web3 integrations specifically? Does foundry worth with zypher?
-  - scale solidity games off-chain with Zeth... but should rewrite in rust!
-  -
-
----
-
 # Further Reading & Resources
 
-- <a style="font-size: 0.8em" target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zypher-buildathon/materials.html">Event Materials ↗️</a>
+## <a target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zypher-buildathon/materials.html">Event Materials ↗️</a>

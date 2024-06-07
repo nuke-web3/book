@@ -11,9 +11,7 @@
     - [🪧 Verifiable Games Using RISC Zero](./risc-zero/zypher-buildathon/presentation.md)
     - [👷 ZK Chess Checkmate](./risc-zero/zypher-buildathon/workshop.md)
 
----
-
-- [🙋 Guide](./contribute/index.md)
+- [🙋 Contribute](./contribute/index.md)
   - [🌀 Topic Template](./contribute/template/page.md)
   - [📋 Copy & Paste Slides](./contribute/copy-paste-slides/page.md)
 

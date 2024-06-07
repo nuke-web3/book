@@ -40,8 +40,8 @@ Here are a few key game specific ones:
 
 <iframe loading=lazy width="560" height="315" src="https://www.youtube-nocookie.com/embed/z7V830zndoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-☝️ A fantastic verteran review of their work and showcases fundementally new type of game that web3 makes possible: build base infrastructure for others **to build on top of _permissionlessly_**.
-Shared infra -> purality of ways to interact with a wider community on the same base layer opens up novel MMO games _**built by and for players**_!
+☝️ A fantastic veteran review of their work and showcases fundamentally new type of game that web3 makes possible: build base infrastructure for others **to build on top of _permissionless_**.
+Shared infra -> plurality of ways to interact with a wider community on the same base layer opens up novel MMO games _**built by and for players**_!
 
 Although today zkVMs help devs avoid needing to write most of the game in some contract language or (zk)DSL, like is enabled in RISC Zero with <a target="_blank" href="https://github.com/risc0/risc0/tree/release-0.21/examples/bevy">the bevy game engine</a>.
 And it's very likely to be far more cost effective to run too!
