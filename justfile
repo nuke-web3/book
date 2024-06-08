@@ -22,6 +22,8 @@ install:
     if ! $(echo "type bun" | sh > /dev/null ); then
         echo "🥟 Installing https://bun.sh ..."
         curl -fsSL https://bun.sh/install | bash
+        # FIXME - only works on linux 🙈
+        source ~/.bashrc
     fi
     echo "💽 Bun installed. NOTE: you may need to update your shell to include this, see above output."
 
@@ -46,14 +48,16 @@ reinstall-dev: reinstall install-dev
 
 # Install base deps and dev tools.
 install-dev: install
+    #!/usr/bin/env bash
+    set -euxo pipefail
     # Install markup link checker (mlc).
-    if ! $(echo "type dprint" | sh > /dev/null ); then
-    cargo install --locked mlc
+    if ! $(echo "type mlc" | sh > /dev/null ); then
+        cargo install --locked mlc
     fi
 
     # Install formatter (dprint).
     if ! $(echo "type dprint" | sh > /dev/null ); then
-    cargo install dprint
+        cargo install dprint
     fi
 
 # First *build* the embedded slides, then serve book.
@@ -83,7 +87,7 @@ serve-book:
 serve-slides:
     bun s
 
-# Serve book with embedd slides for local viewing, NO updates for slides-source file changes
+# Serve book with embedded slides for local viewing, NO updates for slides-source file changes
 serve-embedded:
     bun serve-book 2> /dev/null
 

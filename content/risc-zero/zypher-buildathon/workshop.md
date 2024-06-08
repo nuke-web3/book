@@ -45,24 +45,34 @@ We extend the example by proving we know a set of moves that arrives at that fin
    └── src
        └── main.rs          # 🏃 Host = Execution of guest & GUI & more unproven
    ```
-1. Make some changes to:
-   1. `src/main.rs` to change the FEN game state and see if a non-mate move is detected.
-   1. `methods/guest/src/main.rs` to change what is proven about the game:
-      Perhaps add something to `core/src/lib.rs` around player ID that could be proven?
+1. Add the ability to prove multiple moves arriving at a final checkmate:
+   1. In `core/src/lib.rs` change `Inputs` to allow for many moves, also refactor where that struct is used as needed.
+   1. In `src/main.rs` change the FEN `initial_state` and `mv` to `moves` to support multiple _(legal)_ moves.
+      1. ✨Experiment with game `Inputs` on <a target="_blank" href="https://www.chess.com/analysis?tab=analysis">chess.com/analysis</a> by `Loading` a valid FEN in "setup position" any playing moves.
+      1. Test if a non-mate move is detected.
+   1. In `methods/guest/src/main.rs` change what is `commit`ed about the game.
+
+<details>
+<summary>⚠️ <b>SPOILERS</b> ⚠️</summary>
+
+> <a target="_blank" href="https://github.com/nuke-web3/risc0-v1-chess/pull/1">One possible solution with comments and tips</a>
+
+</details>
 
 ## 📝 Key Takeaways
-
-This example is a bit contrived as it's a single move that should be easy to spot, but highlights:
 
 - Use crates in the zkVM without modification - no need to rewrite in circuits or zkDSL!
 - Use standard patterns like `println!` & `fmt!` normally for basic experiments and debugging in `DEV_MODE`.
 - 10s on lines of code overall -> useful proof, easily extensible!
 - <a target="_blank" href="https://en.wikipedia.org/wiki/Bayesian_game">Incomplete information games</a> are possible on-chain! Hidden data/moves for players are proven, never revealed to _anyone_!
+- There is still many risks of creating privacy and security faults via bugs and all the normal ways cyrptographic systems can break down...
+  _**With zkVMs you are abstracting the math/circuits of zk... NOT the robust design and audits required to harden your system!**_
 
 ## 🤓 Taking it Further
 
 Here are some ideas to keep extending this example to learn more:
 
+- Add something to `core/src/lib.rs` around player identity that could be proven, perhaps their blockchain account via [ENS](https://ens.domains/).
 - Make the game multiplayer with turns between untrusting parties
   - Perhaps using moves signed by players in a <a target="_blank" href="https://ethereum.org/en/developers/docs/scaling/state-channels/">state channel</a> type construction, latter proven to arrive at a final winner (only?) in the receipt.
 - Integrate with the <a target="_blank" href="https://github.com/risc0/risc0-foundry-template">Foundry Template</a>
