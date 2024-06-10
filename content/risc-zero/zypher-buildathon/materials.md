@@ -7,6 +7,7 @@
 - <a target="_blank" href="https://zypher.network/">Zypher Homepage</a>
 - RISC Zero [🪧 Presentation (Video & Sides)](./presentation.md)
 - RISC Zero [👷 Workshop (ZK Chess Checkmate)](./workshop.md)
+- <a target="_blank" href="https://www.youtube.com/playlist?list=PLQVEOmSomLGxlUsT8ThsEUkCcC4BW0rK6">📺 Playlist of all embedded videos</a>
 
 ### ⭐ Zypher 🤝 RISC Zero Example
 
@@ -29,7 +30,7 @@ Here are a few key game specific ones:
 
 ### RISC Zero powered <a target="_blank" href="https://devfolio.co/projects/zksnake-c689">zkSnake (R0 v0.20)</a>
 
-<iframe loading=lazy width="560" height="315" src="https://www.youtube-nocookie.com/embed/zkMqd_AhCFU?si=XH-R6XPzIqf0pHN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading=lazy width="560" height="315" src="https://www.youtube-nocookie.com/embed/zkMqd_AhCFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 > https://github.com/0xAndoroid/zkSnake
 
