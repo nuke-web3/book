@@ -197,54 +197,112 @@ Notes:
 
 ---
 
-## 🤔 What is special about RISC Zero?
-
-- developer productivity (@ hackathons & beyond)
-  - Top 1000 [crates.io](https://crates.io/) tested ~nightly: [reports.risczero.com](https://reports.risczero.com/)
-- todo: key features that are HARD in zkDSL
-- proof continuation
-- execution separate from proof (realtime exec & prove in parallel / after / remote)
-- foundry template & steel & mainnet verifiers
-
-Notes:
-
-- lots of ZKP option, why use R0?
-- What killer features does R0 provide?
-
-- Not exclusive on ZKP world for these in many cases longer term, but the collection of them together today makes it very compelling!
-
-- Zeth _could_ run existing solidity games off chain, optionally unbounded computation per block (gasless). [Zeth deep dive](https://www.youtube.com/watch?v=4pBmf839eOA)
-- NOTE: 256 view call limit - could you do inclusion proof checkpoints? contract state is simply recursive proof of minimal thing needed (maybe block header / hash?) updated by anyone to use for deep archival view calls? prove "this state was in block X that is a child of recent block {younger than 256}"
-
----
-
 ## 🎨 ZK Game Design Patterns
 
 - Prove transcript of game for verifiable high scores
 - Prove state update based on complex game logic
 - Prove validity of player moves while concealing
-- play & prove latter (snake game)
-- proof for each hidden move, perhaps in a tx on chain
-- can run only core game logic in zkVM - GUI and other non-security/privacy/fairness aspects can live outside the proven core logic (diagram)
-- randomness
+- Play & prove latter (snake game)
+- Proof for each hidden move, perhaps in a tx on chain
+- Able to run only core game logic in zkVM - GUI and other non-security/privacy/fairness aspects can live outside the proven core logic (diagram)
+- Randomness
   - cannot do within guest - only fake & deterministic random for replay of moves perhaps (who gets to know seed? Choose? VRF maybe?)
 
 ---
 
-## 📝 Key Takeaways
+## 🎇 What is special about RISC Zero? (1)
 
-- as a game dev: what does zk do and not do for me?
-- IMPORTANT: match version of `cargo risczero` & examples / templates / examples
-- keep guest minimal - extra cycles are VERY expensive (but this is a hackathon, don't over optimize)
-- USE DEV MODE!
+- Developer productivity (@ hackathons & beyond)
+  <br/>&nbsp; Top 1000 <a target="_blank" href="https://crates.io/">crates.io</a> tested nightly,
+  <br/>&nbsp; benchmarks and more: <a target="_blank" href="https://reports.risczero.com/">reports.risczero.com</a>
+- Hard in zkDSL, easy in zkVM:
+  <br/>&nbsp; Loops & branching
+  <br/>&nbsp; Design 🡺 Implementation 🡺 Auditing
+
+Notes:
+
+- Lots of ZKP options, why use R0?
+  - zkDSL _could_ be more performant, but time to market is very high, small set of humans can implement them at all.
+  - Why use us over other zkVMs?
+    First, arguably best devex, v1.0 release stability and prover performance milestones!
+
+---
+
+## 🎇 What is special about RISC Zero? (2)
+
+- Proof <a target="_blank" href="https://www.risczero.com/blog/continuations">continuation</a>
+  <br/>&nbsp; Unbounded guest programs
+- Proof <a target="_blank" href="https://www.risczero.com/blog/proof-composition">composition</a>
+  <br/>&nbsp; "Proof-ception"
+  <br/>&nbsp; Hybrid Client side {🕵️privacy} & server {🦾power}
+- Execution _separate_ from proof generation
+
+Notes:
+
+- Proof-ception = efficient verification of proofs within a guest.
+  - Privacy for small client side proofs and the bulk of proof computational overhead outsourced to an untrusted prover.
+  - Reuse of existing proofs included in new proof using their journal
+  - Batching/compression of many proofs
+  - Proof transposition for compatibility of specific verifiers.
+- Execution is near zero overhead, proving is high overhead.
+  - Realtime exec & prove in parallel / after / remote is possible
+- What killer features does R0 provide?
+
+---
+
+## 🎇 What is special about RISC Zero? (3)
+
+### ⛓️ EVM Support
+
+- <a target="_blank" href="https://github.com/risc0/risc0-foundry-template">RISC Zero Foundry template</a>
+  <br/>&nbsp; Write unbounded programs that are low cost to verify on any EVM chain
+- <a target="_blank" href="https://github.com/risc0/risc0-ethereum">Ethereum contracts, proof systems, and more</a>
+  <br/>&nbsp; View call proofs with **Steel**
+  <br/>&nbsp; ZK Rollups & RollApps
+  <br/>&nbsp; ... Help us define more!
+
+Notes:
+
+- Zeth _could_ run existing solidity games off chain, optionally unbounded computation per block (gasless). [Zeth deep dive](https://www.youtube.com/watch?v=4pBmf839eOA)
+- mention: 256 view call limit - could you do inclusion proof checkpoints? contract state is simply recursive proof of minimal thing needed (maybe block header / hash?) updated by anyone to use for deep archival view calls? prove "this state was in block X that is a child of recent block {younger than 256}"
+
+---
+
+## 🎇 What is special about RISC Zero? (4)
+
+### ✨Zypher Support
+
+## <a target="_blank" href="https://github.com/zypher-game/poker0"> `poker0` ↗️</a>
+
+> A poker game leveraging RISC Zero and PLONK for off-chain proof of game processes, with on-chain validation, built on the <a target="_blank" href="https://github.com/zypher-game/z4">Z4 engine</a>.
+
+Notes:
+
+Take heed: This perhaps is a rather complex starting point from without any experience with RISC Zero or PLONK, we suggest experimenting with the more basic RISC Zero examples first to get a feel for things first!
+
+---
+
+## 🤿 Before you dive deep...
+
+- You _must_ match versions of `cargo risczero` and your Cargo.toml deps
+  <br/>&nbsp; Some examples / templates may not be the version you need!
+  <br/>&nbsp; Bonsai (proving service) is 0.21, updating mid-July 2024 to 1.0
+- Keep guest minimal - extra cycles are _**expensive**_
+  <br/>&nbsp; ...But this is a hackathon, don't stress too much!
+- When experimenting, always use <a target="_blank" href="https://dev.risczero.com/api/generating-proofs/dev-mode"> `DEV_MODE`</a>!
+  <br/>&nbsp; Execution _only_ with mocked proving (fast!)
 - Bonsai API key priority & support
-- you are designing a cryptographic system, not just a game
-- Support forum on discord for help!
-- dedicated channel for this event?
-- TODO more
+  <br/>&nbsp; Apply: <a target="_blank" href="https://www.bonsai.xyz/">bonsai.xyz/</a>
+- 🧠 You are designing a cryptographic system, not just a game!
+- Discord `#💻|support-forum` channel for help
+  <br/>&nbsp; Join: <a target="_blank" href="https://dicord.gg/risczero/">discord.gg/risczero</a>
 
 ---
 
 # Further Reading & Resources
 
-## <a target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zypher-buildathon/materials.html">Event Materials ↗️</a>
+## <a target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zypher-buildathon/materials.html">Nuke 🌄's Book ↗️</a>
+
+- 🗃️ More details and research links
+- 🪧 These slides (fuzzy-searchable!)
+- 👷 ZK Chess Checkmate Workshop (+videos)
