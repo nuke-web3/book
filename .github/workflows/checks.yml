@@ -25,11 +25,8 @@ jobs:
       with:
         config-path: .dprint.json
 
-    # FIXME .mlc.toml config not working... https://github.com/becheran/mlc/issues/78
     - name: Markup Link Checker (mlc)
-      uses: becheran/mlc@v0.16.2
-      with:
-        args: "./content/ --ignore-links '*slides.md,*slides.html,*twitter.com*,*sec.gov*,*support.giphy.com*,*bitdefender.com*,*etherscan.io*,*cryptoslate.com*,*golden.com*,'"
+      uses: becheran/mlc@v0.17.1
 
     - name: Check for image issues (orphans and broken links)
       run: ${PWD}/tools/scripts/orphan-image-scan.sh content/

@@ -24,7 +24,7 @@ Note that many other <a target="_blank" href="https://github.com/risc0/risc0/tre
 Here are a few key game specific ones:
 
 - <a target="_blank" href="https://github.com/risc0/risc0/tree/release-0.21/examples/bevy">Bevy</a> - a serious Rust game engine
-- <a target="_blank" href="https://github.com/risc0/risc0/tree/release-0.21/examples/wordl">Wordl</a> - A non-trivial game
+- <a target="_blank" href="https://github.com/risc0/risc0/tree/release-0.21/examples/wordle">Wordle</a> - A non-trivial game
 - <a target="_blank" href="https://github.com/risc0/risc0/tree/release-0.21/examples/chess">Chess</a>
 - <a target="_blank" href="https://github.com/risc0/risc0/tree/release-0.21/examples/composition">Bevy</a>
 

@@ -10,7 +10,7 @@ We suggest the [online](#hosted-online) version for general use, but cloning, in
 
 ### Hosted Online
 
-The latest version is hosted at: <a target="_blank" href="TODO">TODO</a>
+The latest version is hosted at: <a target="_blank" href="https://nuke-web3.github.io/book/">nuke-web3.github.io/book/</a>
 
 ### Build Offline
 

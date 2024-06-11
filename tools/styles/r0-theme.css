@@ -22,3 +22,9 @@
   --r-selection-background-color: #fbff96;
   --r-selection-color: #ffffff;
 }
+
+.reveal .slide-background-content {
+  background-image: url("/tools/assets/r0/r0_planet.svg");
+  background-size: contain;
+  opacity: 0.3;
+}

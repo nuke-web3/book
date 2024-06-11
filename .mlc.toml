@@ -1,15 +1,29 @@
-# FIXME this config is not working... https://github.com/becheran/mlc/issues/78
 # Print debug information to console
 debug = false
+# Do not warn for links which redirect to the given URL
+do-not-warn-for-redirect-to = ["*reports.risczero.com*"]
 # Do not check web links
 offline = false
 # Check the exact file extension when searching for a file
 match-file-extension = true
 # List of files and directories which will be ignored
-ignore-path = [""]
+ignore-path = ["node_modules", "html-slides", "html-book"]
 # List of links which will be ignored
 ignore-links = [
-  "*slides.md,*slides.html,*twitter.com*,*sec.gov*,*support.giphy.com*,*bitdefender.com*,*etherscan.io*,*cryptoslate.com*,*golden.com*,",
+  # Internal
+  "{{filePath}}",
+  "https://github.com/*/edit*",
+  "*workshop.md",
+  "*workshop.html",
+  "*presentation.md",
+  "*presentation.html",
+  "*materials.md",
+  "*materials.html",
+  "*slides.md",
+  "*slides.html",
+  # External
+  "*twitter.com*",
+  "*support.giphy.com*",
 ]
 # List of markup types which shall be checked
 markup-types = ["Markdown", "Html"]

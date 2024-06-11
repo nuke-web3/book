@@ -324,7 +324,7 @@ The checker configuration is set ine `Makefile.rs` task to see settings.
 The `.mlc.toml` config file is used to _globally_ ignore specific common URLs that throw errors, in error 😛...
 at least it should, but is [not working at this time](https://github.com/becheran/mlc/issues/76).
 _Notice that ignored links must be check from time to time manually!_
-_Thus don't use this unless explicitly needed, rather use a know good URL if at all possible, perhaps from the <https://archive.org/web/>_
+_Thus don't use this unless explicitly needed, rather use a know good URL if at all possible, perhaps from the <https://web.archive.org/>_
 The same tool is also run by our CI on all files for all pushes to all branches.
 See the `.github/workflows/link-check.yml` file in this repo for details.
 

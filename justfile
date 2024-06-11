@@ -133,13 +133,11 @@ img:
 
 # Check included links for all markup (.md|.html) files.
 links:
-    # FIXME .mlc.toml config not working... https://github.com/becheran/mlc/issues/78
-    mlc content/ --ignore-links '*slides.md,*slides.html,*twitter.com*,'
+    mlc
 
 # Check links for specific file(s). Example: `just links-for ./content/contribute/**/*.md`
-links-for:
-    # FIXME .mlc.toml config not working... https://github.com/becheran/mlc/issues/78
-    mlc ${@} --ignore-links '*slides.md,*slides.html,*twitter.com*,'
+links-for file-glob:
+    mlc {{ file-glob }}
 
 # Format .rs (with cargo) and .ts, .md,... (config in .dprint)
 fmt:

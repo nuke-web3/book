@@ -21,19 +21,9 @@ revealOptions:
 
 <link rel="stylesheet" href="../../../tools/styles/r0-theme.css">
 
-<style>
-.reveal .slide-background-content {
-  background-image: url("./img/r0_planet.svg");
-  background-size: contain;
-  opacity: 0.3;
-}
-</style>
-
 <section data-background-opacity=0.3>
 
-# Verifiable Games
-
-<h4 id="using-risc-zero" style="margin-top: -50px;"> <em>Using RISC Zero</em> </h4>
+# RISC Zero<br/> Verifiable Games
 
 <img rounded style="width: 50%; height: 230px; object-fit: cover;" src="./img/fusion-dragon-ball.gif" />
 
@@ -189,7 +179,7 @@ Notes:
 
 <img rounded style="width: 50%; height: 230px; object-fit: cover;" src="./img/bevy-alien-cake-addict.gif" />
 
-#### <a target="_blank" href="https://bevyengine.org/examples/Games/alien-cake-addict">🎮 Play the Demo 🎮</a>
+#### <a target="_blank" href="https://bevyengine.org/examples/Games/alien-cake-addict/">🎮 Play the Demo 🎮</a>
 
 - <a target="_blank" href="https://zyphergames.notion.site/Invitation-gZKm-Provable-Games-Buildathon-1e52aef746874bf08ff1a12c4eed799b?p=77dac845c4984302b9d43a34cc7c2892&pm=c">Real-time Multiplayer Games Track</a> featured demo!
 - <a target="_blank" href="https://github.com/zypher-game/Alien-Cake-Addict">Rendered web game + wallet connect</a>
@@ -295,7 +285,7 @@ Take heed: This perhaps is a rather complex starting point from without any expe
   <br/>&nbsp; Apply: <a target="_blank" href="https://www.bonsai.xyz/">bonsai.xyz/</a>
 - 🧠 You are designing a cryptographic system, not just a game!
 - Discord `#💻|support-forum` channel for help
-  <br/>&nbsp; Join: <a target="_blank" href="https://dicord.gg/risczero/">discord.gg/risczero</a>
+  <br/>&nbsp; Join: <a target="_blank" href="https://discord.com/invite/risczero">discord.gg/risczero</a>
 
 ---
 
