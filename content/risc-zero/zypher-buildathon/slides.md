@@ -19,7 +19,7 @@ revealOptions:
 	progress: true
 ---
 
-<link rel="stylesheet" href="../../../tools/styles/r0-theme.css">
+<link rel="stylesheet" href="/tools/styles/r0-theme.css">
 
 <section data-background-opacity=0.3>
 

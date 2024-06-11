@@ -2,7 +2,7 @@
   "title": "Nuke 🌄 's Book",
   "theme": "tools/styles/base-theme.css",
   "css": [
-    "tools/styles/custom-classes.css"
+    "tools/styles/r0-theme.css"
   ],
   "assetsDir": ".",
   "separator": "\r?\n---\r?\n",
