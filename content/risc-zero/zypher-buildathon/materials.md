@@ -2,7 +2,7 @@
 
 ## 📝 Event Specific Info
 
-- <a target="_blank" href="https://dorahacks.io/hackathon/zypher-hackathon/hackers">Dora Hacks Event Page <strong>(APPLY HERE)</strong></a>
+- <a target="_blank" href="https://dorahacks.io/hackathon/zypher-hackathon/hackers">DoraHacks Event Page <strong>(APPLY HERE)</strong></a>
 - <a target="_blank" href="https://zyphergames.notion.site/gZKm-Provable-Games-Buildathon-1a14e60564894ec59c919549f381a46c?p=4e4d1938a8ed4359be42e528fd6c6846&pm=c">Event & RISC Zero Track Info</a>
 - <a target="_blank" href="https://zypher.network/">Zypher Homepage</a>
 - RISC Zero [🪧 Presentation (Video & Sides)](./presentation.md)
