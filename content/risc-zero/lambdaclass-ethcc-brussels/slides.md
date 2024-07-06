@@ -73,9 +73,7 @@ Notes:
 
 - **Referring to historical state**
 - **Trusting off-chain logic**
-- Calldata limits restrict logic
-- Prohibitive gas costs
-- Most blockchains lack privacy
+- **Boundless Execution**
 
 </nuke-col>
 <nuke-col center>
@@ -85,8 +83,6 @@ Notes:
 - **True ZK (Privacy)**
 - **Scalability (Compression)**
 - **Interoperability (🌉, rollups)**
-- Proof composition (Recursion)
-- Proof continuation (Boundless)
 
 </nuke-col>
 </nuke-cols>
@@ -95,6 +91,8 @@ Notes:
 
 Notes:
 
+- RETH / REVM -> ZETH - support EVM execution of contracts, REVM for only parts.
+  - Also supports verifiable merkle proof of subset of global evm state.
 - **ZK coprocessor** - run verifiable program logic in zkVM by 3rd party or yourself to untrusting parties
 - Added **security** and **fairness** and **privacy** that zero knowledge proofs can provide, as they involve complex decision-making and competitive interactions.
 - Privacy is optional, fully transparent games with ZKPs _can_ provided added guarantees around many things other than that (if carefully designed)
@@ -164,6 +162,7 @@ Notes:
 
 Want to build even more complicated or otherwise impossible contract logic?
 Enter Steel - view call library.
+Example: view call that checks existence of balance on chain, like in our ERC20 example workshop!
 
 ---
 
@@ -217,10 +216,10 @@ Notes:
 
 ## 🎇 What is special about RISC Zero? (3)
 
-### ⛓️ EVM Support
+**⛓️ EVM Support ⛓️**
 
 - <a target="_blank" href="https://github.com/risc0/risc0-foundry-template">RISC Zero Foundry template</a>
-  <br/>&nbsp; Write unbounded programs that are low cost to verify on any EVM chain
+  <br/>&nbsp; Write unbounded programs for EVM chains
 - <a target="_blank" href="https://github.com/risc0/risc0-ethereum">Ethereum contracts, proof systems, and more</a>
   <br/>&nbsp; View call proofs with **Steel**
   <br/>&nbsp; ZK Rollups & RollApps
@@ -237,20 +236,21 @@ Notes:
 
 - You _must_ match versions of `cargo risczero` and your Cargo.toml deps
   <br/>&nbsp; Some examples / templates may not be the version you need!
-  <br/>&nbsp; Bonsai (proving service) is 0.21, updating mid-July 2024 to 1.0
+  <br/>&nbsp; Use `^1.0` versions throughout.
 - Keep guest minimal - extra cycles are _**expensive**_
   <br/>&nbsp; ...But this is a hackathon, don't stress too much!
 - When experimenting, always use <a target="_blank" href="https://dev.risczero.com/api/generating-proofs/dev-mode"> `DEV_MODE`</a>!
   <br/>&nbsp; Execution _only_ with mocked proving (fast!)
 - Bonsai API key priority & support
-  <br/>&nbsp; Apply: <a target="_blank" href="https://www.bonsai.xyz/">bonsai.xyz/</a>
-- 🧠 You are designing a cryptographic system, not just a game!
+  <br/>&nbsp; Apply: <a target="_blank" href="https://www.bonsai.xyz/">bonsai.xyz/</a> (manual review & approval from our team)
 - Discord `#💻|support-forum` channel for help
   <br/>&nbsp; Join: <a target="_blank" href="https://discord.com/invite/risczero">discord.gg/risczero</a>
 
+> 🧠 Don't need to know the crypto details to build...<br/> don't forget you are building a cryptographic system!
+
 ---
 
-# Further Reading & Resources
+# ETHCC Resources
 
 <img rounded style="width: 600px; height: 600px; object-fit: cover;" src="./img/r0_link_ethcc.svg" />
 
