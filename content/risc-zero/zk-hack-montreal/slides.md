@@ -1,9 +1,9 @@
 ---
 title: No Circuits Required - Building ZK Proof Systems in Pure Rust
-tags: RISC Zero, Talk, Presentation, Workshop, zkVM, Steel, EVM, LambdaClass, Hackathon, Zero Knowledge Proof, Applied Cryptography, Rust, ETHCC, Brussels
+tags: RISC Zero, Talk, Presentation, Workshop, zkVM, Steel, EVM, Hackathon, Zero Knowledge Proof, Applied Cryptography, Rust, ZK Hack, Montreal
 duration: 60 minuets
 description: RISC Zero Workshop for the Zypher Provable Games Buildathon - June 2024 
-date: 2024-06-01
+date: 2024-08-09
 #
 # RevealJS Settings
 #
@@ -27,7 +27,7 @@ revealOptions:
 
 ## Building ZK Proof Systems in _Pure Rust_
 
-<a target="_blank" href="https://nuke-web3.github.io/book/risc-zero/lambdaclass-ethcc-brussels/materials.html">Event Materials ↗️</a>
+<a target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zk-hack-montreal/materials.html">Event Materials ↗️</a>
 
 ---
 
@@ -101,11 +101,13 @@ Notes:
 
 ## RISC Zero Bounties
 
-- 🤩 Best zkVM Application - _1,500 USD Up to 3x 500 USD_
-- 🤝 ZK Coprocessor - _1,000 USD Up to 2x 500 USD_
-- 👪 Integrations - _1,000 USD Up to 2x 500 USD_
+- 🤩 Best zkVM Application - _2x 500 USD_
+- 🤝 ZK Coprocessor - _4x 500 USD_
+- 👪 Integrations - _**15x** 200 USD_
 
-> **Qualifications on [DoraHacks](https://dorahacks.io/hackathon/lambdahackweek2/bounties#risc-zero) 👀**
+<br/>
+
+> **Qualifications on [Devfolio](https://zk-hack-montreal.devfolio.co/prizes?partner=RISC+Zero) 👀**
 
 Notes:
 
@@ -247,11 +249,3 @@ Notes:
   <br/>&nbsp; Join: <a target="_blank" href="https://discord.com/invite/risczero">discord.gg/risczero</a>
 
 > 🧠 Don't need to know the crypto details to build...<br/> don't forget you are building a cryptographic system!
-
----
-
-# ETHCC Resources
-
-<img rounded style="width: 600px; height: 600px; object-fit: cover;" src="./img/r0_link_ethcc.svg" />
-
-## [r0.link/ethcc](https://r0.link/ethcc)
