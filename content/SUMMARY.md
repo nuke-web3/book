@@ -11,8 +11,8 @@
     - [🪧 Verifiable Games Using RISC Zero](./risc-zero/zypher-buildathon/presentation.md)
     - [👷 ZK Chess Checkmate](./risc-zero/zypher-buildathon/workshop.md)
   - [🗃️ ZK Hack - Montreal - August 2024](./risc-zero/zk-hack-montreal/materials.md)
-    - [🪧 No Circuits Required - Building ZK Proof Systems in Pure Rust](./risc-zero/zk-hack-montreal/presentation.md)
-    - [👷 ZK ERC20 Balance of EDCSA Verified Account](./risc-zero/zk-hack-montreal/workshop.md)
+    - [🪧 Boundless On-chain Execution Using Proven Off-chain Coprocessing](./risc-zero/zk-hack-montreal/presentation.md)
+    - [👷 Prove ERC20 Balance of ECDSA Verified Account Owner](./risc-zero/zk-hack-montreal/workshop.md)
 
 - [🙋 Contribute](./contribute/index.md)
   - [🌀 Topic Template](./contribute/template/page.md)

@@ -1,4 +1,4 @@
-# No Circuits Required - Building ZK Proof Systems in Pure Rust
+# Boundless On-chain Execution Using Proven Off-chain Coprocessing
 
 <!-- markdown-link-check-disable -->
 <center>

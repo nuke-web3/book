@@ -1,5 +1,5 @@
 ---
-title: No Circuits Required - Building ZK Proof Systems in Pure Rust
+title: Boundless On-chain Execution Using Proven Off-chain Coprocessing
 tags: RISC Zero, Talk, Presentation, Workshop, zkVM, Steel, EVM, Hackathon, Zero Knowledge Proof, Applied Cryptography, Rust, ZK Hack, Montreal
 duration: 60 minuets
 description: RISC Zero Workshop for the Zypher Provable Games Buildathon - June 2024 
@@ -23,9 +23,15 @@ revealOptions:
 
 <section data-background-opacity=0.3>
 
-# No Circuits Required
+# Boundless On-chain Execution
 
-## Building ZK Proof Systems in _Pure Rust_
+## Using Proven Off-chain Coprocessing
+
+<img rounded style="width: 50%; height: 230px; object-fit: cover;" src="./img/fusion-dragon-ball.gif" />
+
+<!-- FIXME: Math doesn't render offline! jsdeliver hard coded.-->
+
+**_On-chain_ $~~~$ 👉 $ZK$ 👈 $~~~$ _Off-chain_**
 
 <a target="_blank" href="https://nuke-web3.github.io/book/risc-zero/zk-hack-montreal/materials.html">Event Materials ↗️</a>
 
@@ -33,7 +39,9 @@ revealOptions:
 
 ## Why RISC Zero?
 
-### _Write Rust 🦀<br/> Not Circuits 𝛌_
+> ### _Write Rust 🦀_
+>
+> ### _Not Circuits 𝛌_
 
 Notes:
 
@@ -126,7 +134,7 @@ Notes:
 
 ---
 
-## RISC Zero On-chain
+## RISC Zero 🤝 EVM Chains
 
 <img rounded style="width: 60%;" src="./img/risc0-ethereum-bonsai.png" />
 
@@ -136,7 +144,7 @@ Notes:
 
 # ✨ Inspiration
 
-##### ⚠️ -- Do not copy 🍝 -- 🙏
+> #### ⚠️ &nbsp; Do **not** copy 🍝 &nbsp; ⚠️
 
 Notes:
 
@@ -158,7 +166,11 @@ Notes:
 
 ---
 
+## Proven Historical State of EVM
+
 <img rounded style="width: 50%; height: 50%; object-fit: cover;" src="./img/steel-banner.png" />
+
+> A trustless "off-chain worker" for EVM RPC calls, and more!
 
 Notes:
 
@@ -197,7 +209,7 @@ Notes:
 ## 🎇 What is special about RISC Zero? (2)
 
 - Proof <a target="_blank" href="https://www.risczero.com/blog/continuations">continuation</a>
-  <br/>&nbsp; Unbounded guest programs
+  <br/>&nbsp; Boundless guest programs
 - Proof <a target="_blank" href="https://www.risczero.com/blog/proof-composition">composition</a>
   <br/>&nbsp; "Proof-ception"
   <br/>&nbsp; Hybrid Client side {🕵️privacy} & server {🦾power}
@@ -248,4 +260,4 @@ Notes:
 - Discord `#💻|support-forum` channel for help
   <br/>&nbsp; Join: <a target="_blank" href="https://discord.com/invite/risczero">discord.gg/risczero</a>
 
-> 🧠 Don't need to know the crypto details to build...<br/> don't forget you are building a cryptographic system!
+> 🧠 Don't need to know the crypto details to build...<br/> BUT don't forget you are building a cryptographic system!
