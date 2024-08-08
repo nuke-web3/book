@@ -165,13 +165,13 @@ Notes:
 
 - Prevent cheating (if somebody modifies game code to increase luck)
 - Trustless score verification to issue rewards
-- Delegete expensive computation to the client side
+- Delegate expensive computation to the client side
 
 ---
 
 ## zkSnake Demo
 
-<iframe loading=lazy width="560" height="315" src="https://www.youtube-nocookie.com/embed/M8oDQ00P3Eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe loading=lazy width="560" height="315" src="https://www.youtube-nocookie.com/embed/M8oDQ00P3Eg?&amp;controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Notes:
 
@@ -190,7 +190,7 @@ Notes:
 
 Notes:
 
-- Developing on RISC Zero was increadibly easy, and didn't require any ZK knowledge
+- Developing on RISC Zero was incredibly easy, and didn't require any ZK knowledge
 - Winner of RISC Zero Coprocessor Bounty at ETHDenver 2024 and did well in community quadratic voting too!
 - Idea: take it further and make a bevy app in wasm w/ webGPU with **shared core logic identical on web & "re-player" zkVM**
 
