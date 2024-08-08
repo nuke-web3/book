@@ -2,7 +2,7 @@
 title: Boundless On-chain Execution Using Proven Off-chain Coprocessing
 tags: RISC Zero, Talk, Presentation, Workshop, zkVM, Steel, EVM, Hackathon, Zero Knowledge Proof, Applied Cryptography, Rust, ZK Hack, Montreal
 duration: 60 minuets
-description: RISC Zero Workshop for the Zypher Provable Games Buildathon - June 2024 
+description: RISC Zero Workshop for the Zypher Provable Games Buildathon - June 2024
 date: 2024-08-09
 #
 # RevealJS Settings
@@ -155,12 +155,42 @@ Building on them to something significantly enhancements _**may**_ be considered
 
 ## <a target="_blank" href="https://devfolio.co/projects/zksnake-c689">zkSnake (R0 v0.20)</a>
 
-<iframe loading=lazy width="560" height="315" src="https://www.youtube-nocookie.com/embed/zkMqd_AhCFU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+**Prove your score in a Snake Game using Zero-Knowledge**
+
+_Proof-of-Concept for provable gaming_
 
 #### <a target="_blank" href="https://github.com/0xAndoroid/zkSnake">zkSnake Source ↗️</a>
 
 Notes:
 
+- Prevent cheating (if somebody modifies game code to increase luck)
+- Trustless score verification to issue rewards
+- Delegete expensive computation to the client side
+
+---
+
+## zkSnake Demo
+
+<iframe loading=lazy width="560" height="315" src="https://www.youtube-nocookie.com/embed/M8oDQ00P3Eg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Notes:
+
+- Go over gameplay
+- After click on mint button
+  - transaction with game data gets sent onchain
+  - data gets picked up by risc0
+  - risc0 bonsai generates a proof
+  - proof gets published and nft gets minted
+
+---
+
+## zkSnake Demo
+
+<img rounded style="width: 50%; height: 50%; object-fit: cover;" src="./img/zk-snake.png" />
+
+Notes:
+
+- Developing on RISC Zero was increadibly easy, and didn't require any ZK knowledge
 - Winner of RISC Zero Coprocessor Bounty at ETHDenver 2024 and did well in community quadratic voting too!
 - Idea: take it further and make a bevy app in wasm w/ webGPU with **shared core logic identical on web & "re-player" zkVM**
 
