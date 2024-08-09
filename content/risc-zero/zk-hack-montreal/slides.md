@@ -179,30 +179,6 @@ You simply clone this repo and run a few commands to get started. Let's walkthro
 git clone https://github.com/risc0/risc0-foundry-template.git
 ```
 
----
-
-```bash
-curl -L https://risczero.com/install | bash
-
-rzup
-
-cargo risczero —version
-```
-
-Notes:
-
-To install Rust or Foundry, you use the really handy `rustup` or `foundryup`.
-
-Well, now just like rustup and foundryup, you can type: curl -L https://risczero.com/install | bash followed by rzup. You can run cargo risczero —version to make sure everything installed correctly.
-
----
-
-<img rounded style="width: 60%;" src="./img/rzup.png" />
-
-Notes:
-
-Now that we have the RISC Zero toolchain installed, let's get into how this foundry template example works.
-Let’s jump straight to contracts/EvenNumber.sol and straight to the function that requires a proof to be verified.
 
 ---
 
@@ -216,7 +192,7 @@ function set(uint256 x, bytes calldata seal) public {
 
 Notes:
 
-Let's run through this function and its arguments.
+Let’s jump straight to contracts/EvenNumber.sol and straight to the function and its arguments that requires a proof to be verified.
 
 Interestingly, we don't know what the verification is here, especially with a strange function name called 'set' and no comments (though I removed those for the presentation). Why is that? Well, we've offloaded computation here from the EVM to Risc Zero's zkVM.
 
@@ -452,6 +428,8 @@ let calldata = IEvenNumber::IEvenNumberCalls::set(IEvenNumber::setCall {
 Notes:
 
 ## Using the IEvenNumber interface, the application ABI-encodes the function call for the 'set' function of the EvenNumber contract. This call includes the verified number, and the seal (proof).
+
+---
 
 # Summary
 
