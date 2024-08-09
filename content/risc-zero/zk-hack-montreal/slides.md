@@ -71,6 +71,24 @@ Notes:
 
 ---
 
+## Why RISC Zero?
+
+> It's a hackathon... 💰
+
+---
+
+## RISC Zero Bounties 🤑
+
+- 🤩 Best zkVM Application - _2x 500 USD_
+- 🤝 ZK Coprocessor - _4x 500 USD_
+- 👪 Integrations - _**15x** 200 USD_
+
+<br/>
+
+> **Qualifications on [Devfolio](https://zk-hack-montreal.devfolio.co/prizes?partner=RISC+Zero) 👀**
+
+---
+
 ## What key web3 problems can ZK address?
 
 <nuke-cols>
@@ -87,7 +105,7 @@ Notes:
 
 ### Layer <0|1|2|...> Devs
 
-- **True ZK (Privacy)**
+- **Selective Privacy**\*
 - **Scalability (Compression)**
 - **Interoperability (🌉, rollups)**
 
@@ -103,20 +121,8 @@ Notes:
 - **ZK coprocessor** - run verifiable program logic in zkVM by 3rd party or yourself to untrusting parties
 - Added **security** and **fairness** and **privacy** that zero knowledge proofs can provide, as they involve complex decision-making and competitive interactions.
 - Privacy is optional, fully transparent games with ZKPs _can_ provided added guarantees around many things other than that (if carefully designed)
-
----
-
-## RISC Zero Bounties
-
-- 🤩 Best zkVM Application - _2x 500 USD_
-- 🤝 ZK Coprocessor - _4x 500 USD_
-- 👪 Integrations - _**15x** 200 USD_
-
-<br/>
-
-> **Qualifications on [Devfolio](https://zk-hack-montreal.devfolio.co/prizes?partner=RISC+Zero) 👀**
-
-Notes:
+- \* Privacy is not "true" Zero Knowledge - math details in this paper: https://eprint.iacr.org/2024/1037.pdf
+- Privacy can be selective: reveal to particular parties explicitly.
 
 ---
 
@@ -240,6 +246,19 @@ I know which choice I would take any day.
 Back to the matter at hand, these two functions carry out the same computation (checking a number is even) but that computation is not carried out in the same place, or on the same ‘virtual machine’.
 One is the EVM, and the other is RISC Zero’s zkVM.
 We can see that the function that utilizes the zkVM for checking a number is even, requires an extra input argument called the `seal`.
+
+---
+
+## RISC Zero 101
+
+<img rounded style="width: 60%;" src="./img/zkVM-diagram-black.png" />
+
+> Recall: the **RECEIPT** contains the Seal & Journal (Committed Outputs)
+
+Notes:
+
+- deeper understanding as exercise for views of this presentation.
+- very happy to answer questions on our discord!
 
 ---
 
