@@ -393,7 +393,7 @@ The docstrings are very helpful here and the RISC Zero team do a great job on th
 
 ---
 
-# Proving Options: Automagically
+# Proving Options 🤌
 
 - `BonsaiProver` if the `BONSAI_API_URL` and `BONSAI_API_KEY` environment variables are set unless `RISC0_DEV_MODE` is enabled.
 
