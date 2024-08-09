@@ -216,6 +216,15 @@ function set(uint256 x, bytes calldata seal) public {
 }
 ```
 
+Notes:
+
+Let's run through this function and its arguments. 
+
+Interestingly, we don't know what the verification is here, especially with a strange function name called 'set' and no comments (though I removed those for the presentation). Why is that? Well, we've offloaded computation here from the EVM to Risc Zero's zkVM.
+
+Let's have a look at a function that does the exact same thing directly in Solidity.
+
+
 ---
 
 ```solidity
@@ -233,6 +242,7 @@ All we're doing here is checking if an input number is even, and if so, update t
 
 So what was all the journal and seal about? Let's go back to it
 
+
 ---
 
 ```solidity
@@ -247,7 +257,8 @@ Notes:
 
 At first glance, we look like we’ve actually complicated things, after all the function with the require statement doesn’t require strange arguments like a `seal`, or to create a `journal`. Sounds like we are working in a medieval library. 
 
-Thankfully, we live in the 21st century post the discovery of zero knowledge cryptography, so just like our medieval ancestors lamented about their lack of ability to take compute offchain, we can lament that we have silly variable names like `journal` and `seal`. I know which choice I would take any day. 
+Thankfully, we live in the 21st century post the discovery of zero knowledge cryptography, so just like our medieval ancestors lamented about their lack of ability to take compute offchain, we can lament that we have silly variable names like `journal` and `seal`. I know which choice I would take any day.
+
 
 Back to the matter at hand, these two functions carry out the same computation (checking a number is even) but that computation is not carried out in the same place, or on the same ‘virtual machine’. One is the EVM, and the other is RISC Zero’s zkVM. We can see that the function that utilises the zkVM for checking a number is even, requires an extra input argument called the `seal`. 
 
@@ -255,7 +266,7 @@ Back to the matter at hand, these two functions carry out the same computation (
 
 # Seal
 
-- The seal is a STARK/SNARK.
+- The seal is a zk-STARK or zk-SNARK.
 - It cryptographically attests to the correct execution of the `guest program`.
 - The `guest program` is checking the parity of `x` --> proof.
 
@@ -270,6 +281,7 @@ So we have the `seal`, in this case as we’re dealing with an onchain environme
 
 # Journal
 
+- Contains the public outputs of the computation
 
 ```solidity [2|1-5]
 function set(uint256 x, bytes calldata seal) public {
@@ -324,21 +336,21 @@ Thankfully, we don’t have to guess and I wrote a simple contract that modified
 # Gas Benchmarks 
 
 - [PASS] testGas1Number() (gas: 71015)
-- [PASS] testGas10Numbers() (gas: 259748)
-- [PASS] testGas1000Numbers() (gas: 23083559)
+- [PASS] testGas10Numbers() (gas: 259748) --> $10
+- [PASS] testGas1000Numbers() (gas: 23083559) --> $900
 - [PASS] testGas10000Numbers() (gas: 231464264)
 
 Notes:
 
-In this example, we are checking an array of numbers onchain, and saving them to a results array *if* they’re even. So to check 10 numbers, it costs 260k gas here. 
+In this example, we are checking an array of numbers onchain, and saving them to a results array if they’re even. So to check 10 numbers, it costs 260k gas here. 
 
-On L1, at an ETH price of $2500, with a gas price of around 15 gwei, 260k gas costs around $10. Each number is costing you one dollar. Checking 1000 numbers at 23M gas, is probably impossible unless you’re some sort of whale with your own large amount of validators to help inclusion, but thats just under 900 dollars. 
+On L1, at an ETH price of $2500$, with a gas price of around 15 gwei, 260k gas costs around $10. Each number is costing you one dollar. Checking 1000 numbers at 23M gas, is probably impossible unless you’re some sort of whale with your own large amount of validators to help inclusion, but thats just under 900 dollars. 
 
 Think to your personal laptop from 10 years ago, that thing could do this calculation is probably nanoseconds.  Food for thought.
 
 ---
 
-# Publisher
+# App
 
 <img rounded style="width: 60%;" src="./img/risc0-ethereum-bonsai.png" />
 
@@ -356,7 +368,7 @@ Let’s walk through the main aspects of the `publisher` app in the Foundry Temp
 
 ---
 
-# Publisher CLI
+# App CLI
 
 ```bash
     cargo run --bin publisher -- \
@@ -408,8 +420,8 @@ If environment variables BONSAI_API_URL and BONSAI_API_KEY  are set, Bonsai will
 # Summary
 
 - We've used RISC Zero's zkVM for an onchain app.
-- We've verified computation offchain and seen it saves *a lot* of gas.
-- Gas is expensive, the EVM
+- We've carried out computation offchain and seen it saves *a lot* of gas.
+- Gas is expensive.
 
 Notes:
 
