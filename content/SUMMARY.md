@@ -13,6 +13,9 @@
   - [🗃️ ZK Hack - Montreal - August 2024](./risc-zero/zk-hack-montreal/materials.md)
     - [🪧 Boundless On-chain Execution Using Proven Off-chain Coprocessing](./risc-zero/zk-hack-montreal/presentation.md)
     - [👷 Prove ERC20 Balance of ECDSA Verified Account Owner](./risc-zero/zk-hack-montreal/workshop.md)
+  - [🗃️ DC303 Meetup - Sept 2024](./risc-zero/dc303-meetup/materials.md)
+    - [🪧 Programmable Cryptography](./risc-zero/dc303-meetup/presentation.md)
+    - [👷 TBD Workshop](./risc-zero/dc303-meetup/workshop.md)
 
 - [🙋 Contribute](./contribute/index.md)
   - [🌀 Topic Template](./contribute/template/page.md)
